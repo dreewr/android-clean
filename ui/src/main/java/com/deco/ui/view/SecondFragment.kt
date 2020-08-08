@@ -1,13 +1,14 @@
 package com.deco.ui.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
+
 import androidx.navigation.fragment.findNavController
-import io.ubivis.hm.ui.R
+import com.deco.ui.R
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.

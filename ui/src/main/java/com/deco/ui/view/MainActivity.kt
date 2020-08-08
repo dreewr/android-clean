@@ -3,7 +3,7 @@ package com.deco.ui.view
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import io.ubivis.hm.ui.R
+import com.deco.ui.R
 import dagger.android.AndroidInjection
 
 import kotlinx.android.synthetic.main.activity_main2.*

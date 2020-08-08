@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
-import io.ubivis.hm.ui.R
+import com.deco.ui.R
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.

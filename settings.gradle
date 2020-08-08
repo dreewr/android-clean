@@ -1,2 +1,2 @@
-include ':presentation', ':ui',':data', ':remote',':domain', ':app'
+include ':presentation', ':ui',':data', ':remote',':domain', ':cache'
 rootProject.name = "android-clean"

@@ -1,11 +1,9 @@
 package com.deco.ui
 
 import android.app.Application
-import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
-
 
 class AppApplication  : Application(), HasAndroidInjector {
 
@@ -22,9 +20,7 @@ class AppApplication  : Application(), HasAndroidInjector {
             .inject(this)
     }
 
-    override fun androidInjector(): AndroidInjector<Any> {
-        return androidInjector
-    }
+    override fun androidInjector() = androidInjector
 
 }
 
