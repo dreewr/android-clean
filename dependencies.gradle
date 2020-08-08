@@ -1,6 +1,6 @@
 ext {
     //Android
-    androidBuildToolsVersion = "28.0.3"
+    androidBuildToolsVersion = "29.0.2"
     androidMinSdkVersion = 21
     androidTargetSdkVersion = 28
     androidCompileSdkVersion = 28
@@ -21,6 +21,7 @@ ext {
     gsonVersion = '2.8.1'
     okHttpVersion = '4.2.2'
     retrofitVersion = '2.3.0'
+    lifecycleVersion = '2.2.0'
     supportLibraryVersion = '26.1.0'
     timberVersion = '4.5.1'
     glideVersion = '4.0.0'
@@ -29,7 +30,8 @@ ext {
     archCompVersion = '1.1.1'
     roomVersion = '2.2.5'
     navVersion = '2.3.0-alpha04'
-    materialComponentsVersion = '1.2.0-alpha05'
+    materialVersion = '1.2.0'
+    constraintVersion = '2.0.0-rc1'
 
     // Testing
     jUnitVersion = '4.12'
@@ -44,7 +46,7 @@ ext {
     runnerVersion = '0.5'
 
     projectDependencies = [
-            kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     ]
     domainDependencies = [
             javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
@@ -86,19 +88,19 @@ ext {
             roomRuntime       : "androidx.room:room-runtime:${roomVersion}",
             roomCompiler      : "androidx.room:room-compiler:${roomVersion}",
             roomRxJava        : "androidx.room:room-rxjava2:${roomVersion}",
-            roomKtx           : "androidx.room:room-ktx:${roomVersion}"
+            roomKtx           : "androidx.room:room-ktx:${roomVersion}",
     ]
 
     cacheTestDependencies = [
-            junit: "junit:junit:${jUnitVersion}",
-            kotlinJUnit: "org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
-            robolectric: "org.robolectric:robolectric:${robolectricVersion}",
-            assertj: "org.assertj:assertj-core:${assertJVersion}",
-            mockito: "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
-            roomTesting: "androidx.room:room-testing:${roomVersion}",
-            archTesting: "androidx.arch.core:core-testing:${roomVersion}",
+            junit        : "junit:junit:${jUnitVersion}",
+            kotlinJUnit  : "org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
+            robolectric  : "org.robolectric:robolectric:${robolectricVersion}",
+            assertj      : "org.assertj:assertj-core:${assertJVersion}",
+            mockito      : "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            roomTesting  : "androidx.room:room-testing:${roomVersion}",
+            archTesting  : "androidx.arch.core:core-testing:${roomVersion}",
             supportRunner: "com.android.support.test:runner:${androidSupportRunnerVersion}",
-            supportRules: "com.android.support.test:rules:${androidSupportRulesVersion}"
+            supportRules : "com.android.support.test:rules:${androidSupportRulesVersion}"
     ]
 
     presentationDependencies = [
@@ -110,9 +112,9 @@ ext {
             javaxAnnotation   : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             javaxInject       : "javax.inject:javax.inject:${javaxInjectVersion}",
             androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
-            archRuntime       : 'androidx.lifecycle:lifecycle-runtime:2.0.0',
-            archExtensions    : 'androidx.lifecycle:lifecycle-extensions:2.0.0',
-            archCompiler      : 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+            archRuntime       : "androidx.lifecycle:lifecycle-runtime:${lifecycleVersion}",
+            archExtensions    : "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+            archCompiler      : "androidx.lifecycle:lifecycle-compiler:${lifecycleVersion}"
     ]
 
     uiDependencies = [
@@ -120,16 +122,18 @@ ext {
             dagger               : "com.google.dagger:dagger:${daggerVersion}",
             daggerSupport        : "com.google.dagger:dagger-android-support:${daggerVersion}",
             daggerProcessor      : "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            material             : "com.google.android.material:material:${materialVersion}",
+            constraintLayout     : "androidx.constraintlayout:constraintlayout:${constraintVersion}",
             rxKotlin             : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
             rxAndroid            : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
             glide                : "com.github.bumptech.glide:glide:${glideVersion}",
-            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
             javaxAnnotation      : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             javaxInject          : "javax.inject:javax.inject:${javaxInjectVersion}",
             androidAnnotations   : 'androidx.annotation:annotation:1.0.0',
             androidSupportV4     : 'androidx.legacy:legacy-support-v4:1.0.0',
             androidSupportV13    : 'androidx.legacy:legacy-support-v13:1.0.0',
-            appCompatV7          : 'androidx.appcompat:appcompat:1.0.0',
+            appCompatV7          : 'androidx.appcompat:appcompat:1.1.0',
             supportRecyclerView  : 'androidx.recyclerview:recyclerview:1.0.0',
             supportDesign        : "com.google.android.material:material:${supportDesignVersion}",
             navigationFragment   : "androidx.navigation:navigation-fragment:${navVersion}",
@@ -140,6 +144,7 @@ ext {
             glassfishAnnotation  : "org.glassfish:javax.annotation:${glassfishAnnotationVersion}",
             roomRuntime          : "android.arch.persistence.room:runtime:${archCompVersion}",
             roomCompiler         : "android.arch.persistence.room:compiler:${archCompVersion}",
-            roomRxJava           : "android.arch.persistence.room:rxjava2:${archCompVersion}",
+            roomRxJava           : "android.arch.persistence.room:rxjava2:${archCompVersion}"
+
     ]
 }
