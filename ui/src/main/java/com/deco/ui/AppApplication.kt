@@ -1,26 +1,22 @@
 package com.deco.ui
 
 import android.app.Application
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
+import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
-class AppApplication  : Application(), HasAndroidInjector {
+@HiltAndroidApp
+class AppApplication  : Application(){
 
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Any>
+    /*INJECTION EXAMPLE*/
+    @Inject lateinit var logger: ExampleLogger
 
     override fun onCreate() {
-        super.onCreate()
-
-        com.deco.ui.injection.DaggerApplicationComponent
-            .builder()
-            .application(this)
-            .build()
-            .inject(this)
+        super.onCreate() // Injection takes place here
+        logger.log("Initializing component")
     }
 
-    override fun androidInjector() = androidInjector
 
 }
+
+
 

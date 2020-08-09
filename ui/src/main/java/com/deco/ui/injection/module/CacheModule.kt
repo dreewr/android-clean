@@ -7,16 +7,16 @@ import com.deco.data.repository.Cache
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ApplicationComponent
 import javax.inject.Singleton
 
+@InstallIn(ApplicationComponent::class)
 @Module
 abstract class CacheModule {
 
-    @Module
     companion object {
-
         @Singleton
-        @JvmStatic
         @Provides
         fun getUserDatabase(application: Application): UserDatabase {
             return UserDatabase.getInstance(application)

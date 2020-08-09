@@ -8,13 +8,12 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.android.components.FragmentComponent
 import io.reactivex.android.BuildConfig
 
-
-@InstallIn(ApplicationComponent::class)
+@InstallIn(FragmentComponent::class)
 @Module
-abstract class RemoteModule {
+abstract class TestModule {
 
     companion object {
         @Provides

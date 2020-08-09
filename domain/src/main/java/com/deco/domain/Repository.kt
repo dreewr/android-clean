@@ -1,3 +1,9 @@
 package com.deco.domain
 
-interface Repository
+interface Repository{
+
+    ///fun exampleCompletable
+
+
+
+}
