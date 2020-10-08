@@ -1,0 +1,3 @@
+package com.deco.presentation
+
+object PresentationConstants
